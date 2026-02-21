@@ -191,8 +191,8 @@ input::-webkit-inner-spin-button {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    line-height: 1;
     font-size: 28px;
+    line-height: 1;
 }
 
 .game-board > [data-status="hidden"] {

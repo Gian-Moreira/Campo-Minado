@@ -170,8 +170,6 @@ function placeNumbers(board, width, height) {
     }
 }   
 
-
-
 /* -----------------------
     display
 ----------------------- */
