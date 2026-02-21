@@ -128,7 +128,6 @@ function placeMines(board, width, height, mineAmount) {
         }
         document.getElementById("warning").innerText = "quantidade de minas maior que espaco disponivel!";
     }
-
     if (DEBUG) {
         console.log("minas colocadas: ");
         console.log(board);
