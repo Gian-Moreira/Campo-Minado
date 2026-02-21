@@ -182,8 +182,8 @@ input::-webkit-inner-spin-button {
 
 .mineAmount {
     display: flex;
-    gap: 5px;
     justify-content: center;
+    gap: 5px;
 }
 
 .game-board > div {

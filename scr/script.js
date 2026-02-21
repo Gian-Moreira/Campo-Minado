@@ -164,6 +164,7 @@ function placeNumbers(board, width, height) {
             currentTile.color = color;
         } 
     }
+    
     if (DEBUG) {
     console.log("numeros colocados: ");
     console.log(board);
