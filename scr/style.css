@@ -1,0 +1,218 @@
+body {
+    background-color: #8ba32a;
+    color: white;
+    width: 60%;
+    margin: auto;
+    position: relative;
+}
+
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* titulo */
+.title {
+    text-align: center;
+}
+
+/* dificuldades */
+.difficulty {
+    outline: 5px solid #000000;
+    border-radius: 10px;
+    background-color: #6d4d39;
+    width: 600px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.difficulty-basic {
+    padding: 10px;
+    border-bottom: 2px solid #000000;
+    text-align: left;
+}
+
+.gamemode {
+    border-radius: 5px;
+    padding: 5px; 
+    background-color: #523a2b;
+    color: white;
+}
+
+.game-information {
+    padding: 5px 0;
+}
+
+
+.gamemode:disabled {
+    background-color: #291d15;
+}
+
+.custom-difficulty {
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+    border-bottom: 2px solid #000000;
+}
+
+.difficulty-basic {
+    text-align: left;
+}
+
+/* remover flexas no input Firefox */ 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* iniciar e reinciar*/
+.game-control {
+    padding: 10px;
+    text-align: center;
+}
+
+.game-control button {
+    background-color: #dddddd;
+    color: #040042;
+    transition: 0.2s;
+    box-shadow: 0.2s;
+    padding: 10px 25px;
+    font-size: large;
+    border-radius: 10px;
+}
+
+.game-control button:hover {
+    background-color: #a1a1a1;
+    transform: translateY(-2px);
+}
+
+.minesweeper-screen{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.game-information{
+    outline: 3px solid #000000;
+    text-align: center;
+    color: #eeeeee;
+    font-size: 19px;
+    background-color: #523a2b;
+    width: 100%;
+}
+
+/* controles*/
+.controles {
+    margin-top: 40px;
+    outline: 4px solid #000000;
+    border-radius: 5px;
+    padding: 3px;
+    width: 600px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #6d4d39;
+}
+
+.controles * *{
+    background-color: #8ba32a;
+    border-radius: 5px ;
+    padding: 5px;
+    color: #303030;
+    font-size: 16px;
+}
+.controles ul{
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.right-click img{
+    transform:  scaleX(-1);
+}
+
+.controles li {
+    outline: 2px solid #000000;
+    width: 100;
+    text-align: center;
+    min-width: 125px;
+}
+
+
+
+/* regras */
+.regras {
+    outline: 4px solid #000000;
+    border-radius: 5px;
+    width: 700px;
+    margin: auto;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #6d4d39;
+}
+
+.regras ul,li {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.regras li::before {
+    content: "𔓘 ";
+    color: #ff0000
+}
+
+/* campos */
+.game-board {
+    margin-top: 3;
+    outline: 3px solid #000000;
+    display: inline-grid;
+    padding: 10px;
+    grid-template-columns: repeat(var(--sizeColumn), 25px);
+    grid-template-rows: repeat(var(--sizeRow), 25px);
+    gap: 4px;
+    background-color: #523a2b;    
+}
+
+.mineAmount {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.game-board > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 1;
+    font-size: 28px;
+}
+
+.game-board > [data-status="hidden"] {
+  background-color: #a8c43a;
+  cursor: pointer;
+}
+
+.game-board > [data-status="mine"] {
+  background-color: #666666;
+}
+
+.game-board > [data-status="number"] {
+  background-color: #6d4d39;
+}
+
+.game-board > [data-status="marked"] {
+  background-color: #8a8a8a;
+}   
+
+input:disabled {
+    cursor: not-allowed;
+}

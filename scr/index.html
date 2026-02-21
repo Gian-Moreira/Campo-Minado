@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo minado</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module"></script>
+</head>
+<body>
+    <Div class="title">
+        <h1>Limpeza de jardim</h1>
+        <h2>Encontre todas as pedras do jardim!</h2>
+    </Div>
+
+    <div class="difficulty">
+
+        <!-- dificuldade deve ser aplicada ao clicar em iniciar ou reiniciar -->
+        <!-- controla a dificuldade do jogo -->
+        <div class="difficulty-basic">
+            <label for="gamemode">Dificuldade</label><br>
+            <select class="gamemode" name="gamemode" id="gamemode">
+                <option value="easy">Facil</option>
+                <option value="normal">Medio</option>
+                <option value="hard">dificil</option>
+                <option value="custom">Customizado</option>
+            </select>
+        </div>
+
+        <!-- apenas ativado quando a opcao de dificuldade "customizado" esta selecionada -->
+        <section class="custom-difficulty">
+            <div class="width">
+                <label for="widthInput">Largura</label><br>
+                <input class="gamemode" type="number" minlength="1" placeholder="Maior que 0" name="width-input" id="widthInput" disabled>
+            </div>
+            <div class="height">
+                <label for="heightInput">Altura</label><br>
+                <input class="gamemode" type="number" minlength="1" placeholder="Maior que 0" name="height-input" id="heightInput" disabled>
+            </div>
+            <div class="mine-amount">
+                <label for="mineAmount">Quantidade de pedras</label><br>
+                <input class="gamemode" type="number" minlength="1" placeholder="Maior que 0" name="mine-amount-input" id="mineAmount" disabled>
+            </div>
+        </section>
+
+        <!-- botao de iniciar e reiniciar jogo-->
+        <div class="game-control">
+            <button id="beginGame" type="submit" value="Submit form">Iniciar</button>
+        </div>
+    </div>
+
+    <section class="minesweeper-screen" oncontextmenu="return false;">
+        <div class="game-information">
+            <div id="warning" class="warning"></div>
+            <div class="mineAmount">
+                <div id="mineInfo">minas restantes:</div>
+                <div id="currentMineAmount"> </div>
+            </div>
+        </div>
+        <div id="gameBoard" class="game-board">
+        </div>
+    </section>
+
+    <section class="instrucoes">
+        <div class="controles">
+            <ul>
+                <li class="left-click"><img src="/Assets/left-click.png" alt="left-click" width="70" height="70"><br>Cavar local</li>
+                <li class="right-click"><img src="/Assets/left-click.png" alt="right-click" width="70" height="70"><br>Marcar pedra</li>
+            </ul>
+        </div>
+
+        <div class="regras">
+            <ul>
+                <li>Clique em uma célula com o botão esquerdo para cavar, cavar pedras quebram a sua pá!</li>
+                <li>Clique com o botão direito para marcar uma pedra.</li>
+                <li>O numero das celulas diz quantas pedras existem ao seu redor.</li>
+                <li>O jogo termina quando uma pedra for cavada, ou nao houverem mais celulas livres.</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
